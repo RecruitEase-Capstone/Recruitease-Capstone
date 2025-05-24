@@ -88,7 +88,7 @@ const Resume: React.FC = () => {
             </Col>
           </Row>
 
-          {/* Enhanced CSS for MultiSelect chip wrapping and responsive design */}
+          {/* Enhanced CSS for MultiSelect chip wrapping, responsive design, and Table Borders */}
           <style dangerouslySetInnerHTML={{
             __html: `
               .p-multiselect-token {
@@ -116,6 +116,40 @@ const Resume: React.FC = () => {
                 padding-top: 8px;
               }
               
+              /* Table Border Styles - Thick Borders */
+              .p-datatable .p-datatable-thead > tr > th {
+                border: 2px solid #000000 !important;
+                border-bottom: 3px solid #dee2e6 !important;
+                background-color: #f8f9fa !important;
+              }
+              
+              .p-datatable .p-datatable-tbody > tr > td {
+                border: 2px solid #000000 !important;
+                border-top: none !important;
+              }
+              
+              .p-datatable .p-datatable-tbody > tr:first-child > td {
+                border-top: 2px solid #dee2e6 !important;
+              }
+              
+              .p-datatable .p-datatable-tbody > tr:hover {
+                background-color: #f5f5f5 !important;
+              }
+              
+              .p-datatable .p-datatable-tbody > tr:nth-child(even) {
+                background-color: #f9f9f9 !important;
+              }
+              
+              .p-datatable .p-datatable-tbody > tr:nth-child(even):hover {
+                background-color: #f0f0f0 !important;
+              }
+              
+              /* Additional border styling for better visibility */
+              .p-datatable table {
+                border-collapse: collapse !important;
+                border: 2px solid #dee2e6 !important;
+              }
+              
               /* Mobile Responsive Enhancements */
               @media (max-width: 768px) {
                 .p-multiselect {
@@ -130,10 +164,13 @@ const Resume: React.FC = () => {
                 .p-datatable .p-datatable-thead > tr > th {
                   padding: 0.5rem 0.25rem !important;
                   font-size: 0.8rem !important;
+                  border: 1px solid #dee2e6 !important;
+                  border-bottom: 2px solid #dee2e6 !important;
                 }
                 .p-datatable .p-datatable-tbody > tr > td {
                   padding: 0.5rem 0.25rem !important;
                   font-size: 0.75rem !important;
+                  border: 1px solid #dee2e6 !important;
                 }
                 
                 /* Adjust column widths for mobile */
@@ -151,6 +188,10 @@ const Resume: React.FC = () => {
                   height: 2rem !important;
                   font-size: 0.75rem !important;
                 }
+                
+                .p-datatable table {
+                  border: 1px solid #dee2e6 !important;
+                }
               }
               
               @media (max-width: 576px) {
@@ -162,10 +203,13 @@ const Resume: React.FC = () => {
                 .p-datatable .p-datatable-thead > tr > th {
                   padding: 0.25rem 0.125rem !important;
                   font-size: 0.7rem !important;
+                  border: 1px solid #dee2e6 !important;
+                  border-bottom: 1px solid #dee2e6 !important;
                 }
                 .p-datatable .p-datatable-tbody > tr > td {
                   padding: 0.25rem 0.125rem !important;
                   font-size: 0.65rem !important;
+                  border: 1px solid #dee2e6 !important;
                 }
                 
                 .p-datatable .p-datatable-thead > tr > th,
@@ -177,6 +221,10 @@ const Resume: React.FC = () => {
                 .p-paginator .p-paginator-first,
                 .p-paginator .p-paginator-last {
                   display: none !important;
+                }
+                
+                .p-datatable table {
+                  border: 1px solid #dee2e6 !important;
                 }
               }
             `

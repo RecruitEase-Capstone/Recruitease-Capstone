@@ -160,7 +160,7 @@ const History: React.FC = () => {
             </Col>
           </Row>
 
-          {/* Add CSS for MultiSelect chip wrapping */}
+          {/* Updated CSS for MultiSelect chip wrapping and Table Borders */}
           <style dangerouslySetInnerHTML={{
             __html: `
               .p-multiselect-token {
@@ -187,6 +187,41 @@ const History: React.FC = () => {
                 align-items: flex-start;
                 padding-top: 8px;
               }
+              
+              /* Table Border Styles - Thicker Borders */
+              .p-datatable .p-datatable-thead > tr > th {
+                border: 2px solid #000000 !important;
+                border-bottom: 3px solid #dee2e6 !important;
+                background-color: #f8f9fa !important;
+              }
+              
+              .p-datatable .p-datatable-tbody > tr > td {
+                border: 2px solid #000000 !important;
+                border-top: none !important;
+              }
+              
+              .p-datatable .p-datatable-tbody > tr:first-child > td {
+                border-top: 2px solid #dee2e6 !important;
+              }
+              
+              .p-datatable .p-datatable-tbody > tr:hover {
+                background-color: #f5f5f5 !important;
+              }
+              
+              .p-datatable .p-datatable-tbody > tr:nth-child(even) {
+                background-color: #f9f9f9 !important;
+              }
+              
+              .p-datatable .p-datatable-tbody > tr:nth-child(even):hover {
+                background-color: #f0f0f0 !important;
+              }
+              
+              /* Additional border styling for better visibility */
+              .p-datatable table {
+                border-collapse: collapse !important;
+                border: 2px solid #dee2e6 !important;
+              }
+              
               @media (max-width: 768px) {
                 .p-multiselect {
                   width: 100% !important;
