@@ -4,6 +4,7 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { InputText } from "primereact/inputtext";
 import { MultiSelect } from "primereact/multiselect";
+import { API_BASE_URL } from "../components/Api";
 
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
@@ -51,6 +52,7 @@ const History: React.FC = () => {
     const getHistory = async () => {
       setLoading(true);
       try {
+        const url = `${API_BASE_URL}/api/cv/summarize`;
         const token = localStorage.getItem("token");
 
         const res = await fetch("/api/cv/history", {

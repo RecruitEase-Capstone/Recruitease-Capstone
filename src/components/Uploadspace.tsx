@@ -253,7 +253,7 @@ const UploadSpace = forwardRef((props, ref) => {
         formData.append("zipFile", file);
       });
 
-      const url = `/api/cv/summarize`;
+      const url = `${API_BASE_URL}/api/cv/summarize`;
       const headers = { Authorization: `Bearer ${token}` };
 
       // Upload file
